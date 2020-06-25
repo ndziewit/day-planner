@@ -1,0 +1,75 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+}
+
+textarea{
+  background: transparent;
+  color: #000000;
+  text-align: center;
+  height:100%;
+  width: 100%;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: aquamarine;
+  color: black;
+  border-radius: 0;
+  margin-bottom:0;
+}
+
+.hour-block{
+  text-align: center;
+  border-radius: 15px;
+}
+
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;;
+}
+
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 3px solid #000000;
+  border-right: 3px solid #000000;
+  padding-top:30px;
+}
+
+.past {
+  background-color: #d3d3d3;
+  color: white;
+}
+
+.current {
+  background-color: #ff6961;
+  color: white;
+}
+
+.upcoming {
+  background-color: #77dd77;
+  color: white;
+}
+
+.saveTime {
+  background-color: white;
+  color: black;
+  border-top: black 2px solid;
+  border-left: black 2px solid;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.saveTime:hover {
+  cursor:pointer;
+  background-color: #cfcfcf;
+  text-shadow: 2px 2px rgb(226, 226, 226);
+}
+
+#currentDay{
+  font-weight:bold;
+
+}
