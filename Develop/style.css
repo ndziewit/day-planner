@@ -5,7 +5,7 @@ body {
   background-image: linear-gradient(rgb(247, 188, 160), rgb(247, 188, 160));
 }
 
-textarea{
+textarea {
   background: transparent;
   color: #000000;
   text-align: center;
@@ -14,6 +14,8 @@ textarea{
   width: 100%;
   border-top: 1px rgba(255, 255, 255, 75);
   resize: none;
+  border: none;
+  padding-top: 30px;
 }
 
 .jumbotron {
@@ -22,7 +24,7 @@ textarea{
   color: black;
   text-shadow: 2px 2px rgb(226, 226, 226);
   border-radius: 0;
-  margin-bottom: 0;
+  margin-bottom: -20px;
 }
 
 .lead {
@@ -35,10 +37,9 @@ textarea{
 
 }
 
-.hour-block{
+.hour-block {
   text-align: center;
   border-radius: 15px;
-  background: transparent;
 }
 
 .col-md-8 {
@@ -47,7 +48,7 @@ textarea{
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
+  height: 75px;
 }
 
 .hour {
@@ -70,6 +71,13 @@ textarea{
 
 .current {
   background-color: #e7e7e7;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.current:hover {
+  background-color: #cccccc;
+
 }
 
 .upcoming {
