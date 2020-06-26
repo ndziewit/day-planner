@@ -13,6 +13,7 @@ textarea{
   height:100%;
   width: 100%;
   border-top: 1px rgba(255, 255, 255, 75);
+  resize: none;
 }
 
 .jumbotron {
@@ -21,17 +22,27 @@ textarea{
   color: black;
   text-shadow: 2px 2px rgb(226, 226, 226);
   border-radius: 0;
-  margin-bottom:0;
+  margin-bottom: 0;
 }
 
 .lead {
   text-shadow: 2px 2px rgb(226, 226, 226);
 }
 
+#currentDay {
+  font-weight:bold;
+  font-size: 18px;
+
+}
+
 .hour-block{
   text-align: center;
   border-radius: 15px;
   background: transparent;
+}
+
+.col-md-8 {
+  border-top: black 2px solid;
 }
 
 .row {
@@ -42,8 +53,8 @@ textarea{
 .hour {
   background-color: #d8a0f7;
   color: #000000;
-  border-top: 3px solid #000000;
-  border-right: 3px solid #000000;
+  border-top: 2px solid #000000;
+  border-right: 2px solid #000000;
   padding-top:30px;
   font-weight: bold;
 }
@@ -58,7 +69,7 @@ textarea{
 }
 
 .current {
-  background-color: #d4d4d4;
+  background-color: #e7e7e7;
 }
 
 .upcoming {
@@ -68,18 +79,14 @@ textarea{
 .saveTime {
   background-color: #bef7a0;
   color: black;
-  border-top: black 3px solid;
-  border-left: black 3px solid;
+  border-top: black 2px solid;
+  border-left: black 2px solid;
   font-weight: bold;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .saveTime:hover {
   cursor:pointer;
   background-color: #cfcfcf;
   text-shadow: 2px 2px rgb(226, 226, 226);
-}
-
-#currentDay{
-  font-weight:bold;
 }

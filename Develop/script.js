@@ -3,10 +3,10 @@ $( document ).ready(function() {
     var container = $('.container');
     var currentTime = moment().format('LT');
     var currentHour = parseInt(currentTime[0]+currentTime[1]);
-    var today = new Date();
-    var date = (today.getMonth()+1) + '-' + today.getDate() + '-' + today.getFullYear();
-    $("#currentDay").append(date);
     var upcoming = false;
+
+    var date = moment().calendar();
+    $("#currentDay").append(date);
 
     var storage = JSON.parse(localStorage.getItem('planner'));
     if (storage === null){
@@ -14,15 +14,18 @@ $( document ).ready(function() {
             "9AM" : "", "10AM" : "","11AM" : "","12PM" : "","1PM" : "","2PM" : "","3PM" : "","4PM" : "","5PM" : ""
         }
     }
-    
+    console.log(storage)
+    console.log(currentTime[0])
+    console.log(currentTime[1])
+    console.log(currentTime[2])
+    console.log(currentTime[3])
+    console.log(currentTime[4])
+    console.log(currentTime[5])
+    console.log(currentTime[6])
+
     function createHourRow(time, data){
-        if(time.length === 3){
-            var displayTime = time[0] + " " + time[1] + time[2];
-        } else {
-            var displayTime = time[0] + time[1] + " " + time[2] + time[3];
-        }
-        var row = $('<div>');
-        row.attr('id', time).addClass('row hour-block');
+        var displayTime = time;
+        var row = $('<div>').attr('id', time).addClass('row hour-block');
         container.append(row);
 
         for(var i = 0; i < 3; i++){
@@ -37,16 +40,15 @@ $( document ).ready(function() {
                     newCol.append(inputArea);
                     break;
                 case 2:
-                    newCol.addClass('col-md-2 saveTime').text("Click here to save time block");
+                    newCol.addClass('col-md-2 saveTime').text("Save Event");
                     break;
             }
-            row.append(newCol);
-            row.addClass('past');
+            row.append(newCol).addClass('past');
             if(upcoming && parseInt(time) !== currentHour){
                 row.addClass('upcoming');
                 row.removeClass('past');
             }
-            if(parseInt(time) === currentHour){
+            else if(parseInt(time) === currentHour){
                 row.addClass('current');
                 upcoming = true;
                 row.removeClass('past');
@@ -54,7 +56,6 @@ $( document ).ready(function() {
         }
     }
     
-    // Create time blocks 9 AM to 5 PM
     for(key in storage){
         var data = storage[key];
         createHourRow(key, data);
